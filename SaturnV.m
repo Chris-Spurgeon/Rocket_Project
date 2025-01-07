@@ -5,10 +5,10 @@ close all;
 
 % Define parameters
 params.mu = 398600;           % Gravitational parameter for Earth (km^3/s^2)
-params.k = .026 ;              % Sigmoid steepness
+params.k = .0245 ;              % Sigmoid steepness
 params.ro = 6371+170;             % Orbit radius (300 km above surface)
 params.g0 = 0.00981;          % Gravitational acceleration in km/s^2
-params.beta = 0.1;            % Contols when turning starts
+params.beta = 0.09;            % Contols when turning starts
 
 
 % Unpack parameters
@@ -100,7 +100,7 @@ for i = 2:N
     all_t = [all_t; all_t(end) + t]; % Shift time to continue from previous stage
     all_y = [all_y; y];
 end
-
+Plots
 %% 
 
 % Now we set orbital contidtions to stay in desired orbit
